@@ -5,7 +5,7 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist/automail-ui"
+        "distDir": "dist/automail-ui/browser"
       }
     }
   ],
