@@ -1,0 +1,25 @@
+<div class="card">
+  <h2>Email Automation Tool</h2>
+
+  <div class="field">
+    <label>📄 Upload Excel File</label>
+    <input type="file" (change)="onFileSelected($event, 'file')" />
+  </div>
+
+  <div class="field">
+    <label>📎 Upload Resume</label>
+    <input type="file" (change)="onFileSelected($event, 'resume')" />
+  </div>
+
+  <button class="send-button" (click)="sendEmails()" [disabled]="isSending">
+    <ng-container *ngIf="!isSending">🚀 Send Emails</ng-container>
+    <ng-container *ngIf="isSending">
+      <span class="spinner"></span> Sending...
+    </ng-container>
+  </button>
+
+  <div class="status">
+    <div class="message success" *ngIf="successMessage">✅ {{ successMessage }}</div>
+    <div class="message error" *ngIf="errorMessage">❌ {{ errorMessage }}</div>
+  </div>
+</div>
