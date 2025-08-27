@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/automail-ui",
+  "outputDirectory": "dist/browser",
   "rewrites": [
     {
       "source": "/(.*)",
